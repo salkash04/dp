@@ -1,0 +1,123 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #1e90ff;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1rem;
+}
+
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.lesson-content h2 {
+    color: #1e90ff;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.lesson-content p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.lesson-content ul {
+    margin: 1rem 0;
+    padding: 0;
+    list-style: none;
+}
+
+.lesson-content ul li {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.lesson-content ul li:before {
+    color: #1e90ff;
+    position: absolute;
+    left: 0;
+}
+
+/* Стили для редактора кода */
+textarea#codeEditor {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: monospace;
+    font-size: 16px;
+    padding: 10px;
+    resize: vertical;
+}
+
+button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Стили для вывода результата */
+pre#output {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    font-family: monospace;
+    font-size: 16px;
+    margin-top: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    color: #333;
+    max-height: 300px;
+    overflow-y: auto;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1e90ff;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

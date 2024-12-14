@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Дашборд</title>
+    <link rel="stylesheet" href="/css/dashboard.css"> <!-- Подключение файла стилей -->
+</head>
+<body>
+
+<header>
+    <h1>Дашборд</h1>
+    <nav>
+        <a href="/dashboard">Главная</a>
+        <a href="/questions">Вопросы</a>
+        <div class="dropdown">
+            <button>Профиль</button>
+            <div class="dropdown-content">
+                <a href="/profile/edit">Редактировать профиль</a>
+                <a href="/auth/logout">Выход</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="container">
+    <h2>Список курсов</h2>
+
+    <!-- Контейнер для курсов -->
+    <div class="course-container" th:each="course : ${courses}">
+        <a th:href="@{/courses/{id}(id=${course.id})}" class="course-button">
+            <img src="path/to/image.jpg" alt="Картинка курса" class="course-image"> <!-- Замените на путь к изображению -->
+            <div class="course-title" th:text="${course.name}"></div>
+            <div class="course-description" th:text="${course.description}"></div>
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>

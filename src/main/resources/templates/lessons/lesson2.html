@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Первая программа на Java</title>
+    <link rel="stylesheet" href="/css/lessons/lessons2.css"> <!-- Подключаем общий CSS -->
+    <script>
+        // Функция для загрузки шаблонного кода
+        async function loadTemplate() {
+            const response = await fetch('/api/compiler/template');
+            const template = await response.text();
+            document.getElementById('codeEditor').value = template;
+        }
+
+        // Функция для выполнения кода
+        async function runCode() {
+            const code = document.getElementById('codeEditor').value;
+            const response = await fetch('/api/compiler/run', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'text/plain'
+                },
+                body: code
+            });
+            const result = await response.text();
+            document.getElementById('output').innerText = result;
+        }
+
+        // Загрузка шаблона при открытии страницы
+        window.onload = loadTemplate;
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>Курс: Основы Java</h1>
+    <nav>
+        <a href="#">Главная</a>
+        <a href="#">Уроки</a>
+        <a href="#">Контакты</a>
+    </nav>
+</header>
+
+<main>
+    <h1>Первая программа на Java</h1>
+    <section class="task">
+        <h2>Задача</h2>
+        <p>Напишите программу, которая выводит на консоль <code>Hello, World!</code>.</p>
+    </section>
+
+    <section class="compiler">
+        <h2>Онлайн-компилятор</h2>
+        <textarea id="codeEditor" rows="15" cols="70"></textarea><br>
+        <button onclick="runCode()">Выполнить</button>
+        <pre id="output"></pre>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Мой Java-курс. Все права защищены.</p>
+</footer>
+</body>
+</html>

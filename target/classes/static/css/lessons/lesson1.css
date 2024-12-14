@@ -1,0 +1,93 @@
+/* Общий стиль */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #1e90ff;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1rem;
+}
+
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.lesson-content h2 {
+    color: #1e90ff;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.lesson-content p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.lesson-content ul {
+    margin: 1rem 0;
+    padding: 0;
+    list-style: none;
+}
+
+.lesson-content ul li {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.lesson-content ul li:before {
+    color: #1e90ff;
+    position: absolute;
+    left: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1e90ff;
+    color: #fff;
+}
+.next-module {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.next-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.next-button:hover {
+    background-color: #0056b3;
+}

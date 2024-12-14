@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    background-color: #007BFF; /* Цвет фона заголовка */
+    color: white; /* Цвет текста */
+    padding: 10px 20px; /* Отступы */
+    display: flex; /* Flexbox для расположения элементов */
+    justify-content: space-between; /* Распределение пространства между элементами */
+    align-items: center; /* Центрирование по вертикали */
+}
+
+nav {
+    display: flex; /* Flexbox для навигации */
+    align-items: center; /* Центрирование по вертикали */
+}
+
+nav a {
+    color: white; /* Цвет текста ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+    margin-left: 20px; /* Отступ между ссылками */
+}
+
+nav a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+.dropdown {
+    position: relative; /* Позиционирование для выпадающего меню */
+}
+
+.dropdown button {
+    background-color: #007BFF; /* Цвет кнопки выпадающего меню */
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+}
+
+.dropdown-content {
+    display: none; /* Скрываем выпадающее меню по умолчанию */
+    position: absolute; /* Абсолютное позиционирование для выпадающего меню */
+    background-color: white; /* Цвет фона выпадающего меню */
+    min-width: 160px; /* Минимальная ширина выпадающего меню */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Тень для выпадающего меню */
+    z-index: 1; /* Устанавливаем уровень отображения выше других элементов */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Показываем выпадающее меню при наведении на родительский элемент */
+}
+
+.container {
+    max-width: 1200px; /* Максимальная ширина контейнера */
+    margin: auto; /* Центрирование контейнера */
+    padding: 20px; /* Отступы внутри контейнера */
+    background-color: white; /* Белый фон для контейнера */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Тень вокруг контейнера */
+    border-radius: 8px; /* Закругленные углы для контейнера */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+h2 {
+    color: #555;
+}
+
+/* Контейнер для кнопок курсов с Flexbox для горизонтального расположения */
+.course-container {
+    display: flex; /* Используем Flexbox для горизонтального расположения курсов */
+    flex-wrap: wrap; /* Позволяем оборачивать элементы на новую строку при необходимости */
+    justify-content: space-around; /* Распределяем пространство между элементами */
+}
+
+.course-button {
+    display: block;
+    width: 300px; /* Ширина кнопки курса */
+    margin: 10px; /* Отступы между кнопками */
+    padding: 20px;
+    background-color: #007BFF; /* Синий цвет кнопки курса */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px; /* Закругленные углы кнопки курса */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень для кнопки курса */
+    transition: background-color 0.3s; /* Плавный переход цвета фона кнопки курса */
+}
+
+.course-button:hover {
+    background-color: #0056b3; /* Темно-синий при наведении на кнопку курса */
+}
+
+.course-image {
+    width: 100%; /* Ширина изображения на всю кнопку курса */
+    height: auto; /* Автоматическая высота изображения курса */
+    border-radius: 8px; /* Закругленные углы для изображения курса */
+}
+
+.course-title {
+    font-size: 1.5em; /* Размер шрифта названия курса */
+    margin-top: 10px; /* Отступ сверху для названия курса */
+}
+
+.course-description {
+    font-size: 1em; /* Размер шрифта описания курса */
+    margin-top: 5px; /* Отступ сверху для описания курса */
+}

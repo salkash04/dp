@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Курс Spring Boot</title>
+    <link rel="stylesheet" href="/css/styles.css"> <!-- Подключение файла стилей -->
+</head>
+<body>
+
+<header>
+    <h1>Курс Spring Boot</h1>
+    <nav>
+        <a href="/dashboard">Главная</a>
+        <a href="/questions">Вопросы</a>
+        <div class="dropdown">
+            <button>Профиль</button>
+            <div class="dropdown-content">
+                <a href="/profile/edit">Редактировать профиль</a>
+                <a href="/auth/logout">Выход</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="container">
+    <!-- Содержимое курса Spring Boot -->
+    <h2>Описание курса</h2>
+    <!-- Добавьте описание курса здесь -->
+</div>
+
+</body>
+</html>
